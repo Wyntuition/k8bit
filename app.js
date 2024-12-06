@@ -1,7 +1,7 @@
 const app = App()
 let lastResourceVersion
 
-fetch('/api/v1/pods')
+fetch('/api/api/v1/pods')
   .then((response) => response.json())
   .then((response) => {
     const pods = response.items
@@ -14,7 +14,7 @@ fetch('/api/v1/pods')
   .then(() => streamUpdates())
 
 function streamUpdates() {
-  fetch(`/api/v1/pods?watch=1&resourceVersion=${lastResourceVersion}`)
+  fetch(`/api/api/v1/pods?watch=1&resourceVersion=${lastResourceVersion}`)
     .then((response) => {
       const stream = response.body.getReader()
       const utf8Decoder = new TextDecoder('utf-8')

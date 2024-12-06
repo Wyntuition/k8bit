@@ -6,14 +6,20 @@ K8bit is a tiny dashboard that is meant to demonstrate how to use the Kubernetes
 
 ## Usage
 
-You can start the dashboard with:
+1. Start the web server:
+
+```bash
+node server.js
+```
+
+Start the dashboard with:
 
 ```bash
 $ kubectl proxy --www=.
 Starting to serve on 127.0.0.1:8001
 ```
 
-Open the following URL <http://127.0.0.1:8001/static>.
+Browse to `http://localhost:3000`
 
 ## Related
 
